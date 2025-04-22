@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paqueteria</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(170, 166, 166, 0.7);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar img {
+    height: 50px;
+}
+.container {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .tree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .node {
+            background-color: #ffffff;
+            border: 2px solid #007bff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            width: 220px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .node:hover {
+            background-color: #e6f0ff;
+        }
+        .node-content {
+            display: none;
+            margin-top: 10px;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            border: 1px solid #007bff;
+        }
+        .node.active .node-content {
+            display: block;
+        }
+        .line {
+            height: 2px;
+            width: 40px;
+            background-color: #007bff;
+            margin: 5px 0;
+        }
+        .line-vertical {
+            width: 2px;
+            height: 30px;
+            background-color: #007bff;
+        }
+        .parent {
+            margin-bottom: 30px;
+        }
+        .child {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 30px;
+        }
+        .child .node {
+            margin: 0 20px;
+        }
+        .contenidos {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.logo {
+  width: 500px;
+  height: auto;
+  filter: grayscale(100%) opacity(50%);
+  transition: filter 0.3s ease;
+}
+
+.logo:hover {
+  filter: grayscale(0%) opacity(100%);
+}
+        .contenidox {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+footer {
+    background-color: #B0AFAF;   
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    position: fixed;           
+    right: 20px;               
+    bottom: 80px;              
+    display: flex;
+    flex-direction: column;     
+    gap: 15px;                 
+    opacity: 0.7;               
+    z-index: 1000;             
+}
+
+.social-icons a {
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease; 
+}
+
+.social-icons img {
+    width: 30px;                
+    height: 30px;               
+    filter: invert(1) grayscale(1); 
+    transition: opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icons img:hover {
+    opacity: 1;                 
+    filter: invert(1) grayscale(0); 
+    transform: scale(1.1);      
+}
+
+@media (max-width: 600px) {
+    .social-icons {
+        gap: 10px;              
+    }
+
+    .social-icons img {
+        width: 25px;           
+        height: 25px;           
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="LOGO.JPG" alt="Logo"> 
+    </div>
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="Delivery Service Animated Promo Video.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="container">
+        <div class="tree">
+
+            <div class="node parent" id="main-node">
+                <h1>Intermediarios en Paquetería</h1>
+                <div class="node-content">
+                    <p>Nos encargamos de ser intermediarios en paquetería, asegurando que tus productos lleguen a su destino de manera segura y eficiente.</p>
+                </div>
+                <div class="line"></div>
+            </div>
+   
+            <div class="child">
+                <div class="node" id="node1">
+                    <h3>Envíos Seguros</h3>
+                    <div class="node-content">
+                        <p>Garantizamos que tus paquetes se entreguen sin contratiempos gracias a nuestra red confiable de transportistas.</p>
+                    </div>
+                    <div class="line-vertical"></div>
+                </div>
+                
+
+
+                <div class="node" id="node2">
+                    <h3>Red de Transportistas</h3>
+                    <div class="node-content">
+                        <p>Contamos con una red de transportistas y aliados estratégicos
+                             para ofrecer el mejor servicio. Tambien contamos con motocicletas y vehiculos que te haran llegar a tu detino lo mas
+                              rapido posible, conductores totalmente capacitados</p>
+                    </div>
+                    <div class="line-vertical"></div>
+                </div>
+             
+                <div class="node" id="node3">
+                    <h3>Gestión de Rutas</h3>
+                    <div class="node-content">
+                        <p>Optimización de rutas para asegurar la entrega a tiempo y sin retrasos.</p>
+                    </div>
+                    <div class="line-vertical"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+        <section>
+        <div class="Contenidos">
+          <h1>Empresas con las que trabajamos actualmente</h1>
+          <div class="logos">
+            <img src="99min.jpg" alt="Logo Empresa 1" class="logo">
+            <img src="logo-mercado-libre.png" alt="Logo Empresa 2" class="logo">
+          </div>
+        </div>
+    </section>
+
+    <div class="contenidox">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 <a href="https://www.bdo.com.mx" target="_blank">BDO</a> | Todos los derechos reservados.</p>
+
+        
+        <div class="social-icons">
+            <a href="https://www.facebook.com/share/1Amo4HftBx/" target="_blank" title="Compartir en Facebook">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
+            <a href="https://wa.me/5637713882" target="_blank" title="Enviar mensaje en WhatsApp">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            </a>
+            <a href="https://wa.me/5625863830" target="_blank" title="Enviar mensaje en WhatsApp">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            </a>
+            <a href="mailto:luis.lborja@soec.com.mx" title="Enviar correo a Luis">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Correo">
+            </a>
+            <a href="mailto:adm@soec.com.mx" title="Enviar correo al Administrador">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Correo">
+            </a>
+            <a href="https://www.instagram.com/bdo_ixtapaluca?igsh=cm1jYWlsejFieTdl" target="_blank" title="Visitar Instagram">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+    
+
+
+    <script>
+        document.querySelectorAll('.node').forEach(function(node) {
+            node.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+    </script>
+    
+</body>
+</html>

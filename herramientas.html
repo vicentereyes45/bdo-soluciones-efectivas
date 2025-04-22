@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(170, 166, 166, 0.7);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar img {
+    height: 50px;
+}
+
+.header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .section-title h2 {
+            font-size: 28px;
+            color: #007bff;
+        }
+        .section-title p {
+            font-size: 16px;
+            color: #555;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .service-card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .service-card h3 {
+            margin-top: 15px;
+            color: #007bff;
+            font-size: 22px;
+        }
+        .service-card p {
+            color: #555;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .contenidox {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+footer {
+    background-color: #B0AFAF;   
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    position: fixed;           
+    right: 20px;               
+    bottom: 80px;              
+    display: flex;
+    flex-direction: column;     
+    gap: 15px;                 
+    opacity: 0.7;               
+    z-index: 1000;             
+}
+
+.social-icons a {
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease; 
+}
+
+.social-icons img {
+    width: 30px;                
+    height: 30px;               
+    filter: invert(1) grayscale(1); 
+    transition: opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icons img:hover {
+    opacity: 1;                 
+    filter: invert(1) grayscale(0); 
+    transform: scale(1.1);      
+}
+
+@media (max-width: 600px) {
+    .social-icons {
+        gap: 10px;              
+    }
+
+    .social-icons img {
+        width: 25px;           
+        height: 25px;           
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="LOGO.JPG" alt="Logo"> 
+    </div>
+ 
+    <header>
+        <h1>Servicios de Planeación y Diseño para Impulsar Nuevos Negocios</h1>
+    </header>
+    
+    <div class="container">
+        <section class="section-title">
+            <h2>¿Por qué elegir nuestros servicios?</h2>
+            <p>Ofrecemos soluciones innovadoras para ayudar a nuevos negocios a crecer mediante un enfoque estratégico de planeación y diseño. Nuestro equipo trabaja contigo para crear una hoja de ruta clara hacia el éxito, además de proporcionarte las herramientas adecuadas para que puedas ejecutar tus ideas de manera eficiente.</p>
+        </section>
+    
+        <section>
+            <h2>Servicios que Ofrecemos</h2>
+            <div class="services">
+               
+                <div class="service-card">
+                    <img src="planeaciondeestrategia.jpg" alt="Planeación Estratégica">
+                    <h3>Planeación Estratégica</h3>
+                    <p>Te ayudamos a definir tu visión y objetivos comerciales, creando un plan de acción detallado para asegurar que tu negocio crezca de forma sostenible.</p>
+                </div>
+    
+            
+                <div class="service-card">
+                    <img src="diseño de marca.jpg" alt="Diseño de Marca">
+                    <h3>Diseño de Marca</h3>
+                    <p>Desarrollamos una identidad visual que refleje los valores de tu negocio y que atraiga a tu público objetivo de forma efectiva.</p>
+                </div>
+    
+                <div class="service-card">
+                    <img src="herramientas digitales.jpg" alt="Herramientas Digitales">
+                    <h3>Herramientas Digitales</h3>
+                    <p>Ofrecemos un conjunto de herramientas modernas para gestionar tu negocio de manera eficiente, desde software de gestión hasta soluciones en la nube.</p>
+                </div>
+            </div>
+        </section>
+    
+        <section>
+            <h2>Herramientas Interactivas para Tu Negocio</h2>
+            <p>Además de nuestros servicios de planeación y diseño, ponemos a tu disposición un conjunto de herramientas digitales que mejorarán la productividad y administración de tu negocio. ¡Explóralas!</p>
+            <div class="services">
+   
+                <div class="service-card">
+                    <img src="crm.jpg" alt="CRM">
+                    <h3>CRM (Gestión de Clientes)</h3>
+                    <p>Optimiza la relación con tus clientes, automatiza tus procesos de ventas y aumenta la eficiencia con nuestro sistema CRM fácil de usar.</p>
+                </div>
+    
+               
+                <div class="service-card">
+                    <img src="herramientas de marketing.jpg" alt="Herramientas de Marketing">
+                    <h3>Herramientas de Marketing</h3>
+                    <p>Contamos con herramientas digitales para crear campañas de marketing efectivas, gestionar redes sociales y obtener análisis de desempeño.</p>
+                </div>
+    
+                <div class="service-card">
+                    <img src="Gestion de proyectos.jpg" alt="Gestión de Proyectos">
+                    <h3>Gestión de Proyectos</h3>
+                    <p>Gestiona proyectos de manera eficaz, asigna tareas, controla plazos y mide el progreso con nuestra plataforma intuitiva.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="contenidox">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 <a href="https://www.bdo.com.mx" target="_blank">BDO</a> | Todos los derechos reservados.</p>
+
+        
+        <div class="social-icons">
+            <a href="https://www.facebook.com/share/1Amo4HftBx/" target="_blank" title="Compartir en Facebook">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
+            <a href="https://wa.me/5637713882" target="_blank" title="Enviar mensaje en WhatsApp">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            </a>
+            <a href="https://wa.me/5625863830" target="_blank" title="Enviar mensaje en WhatsApp">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            </a>
+            <a href="mailto:luis.lborja@soec.com.mx" title="Enviar correo a Luis">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Correo">
+            </a>
+            <a href="mailto:adm@soec.com.mx" title="Enviar correo al Administrador">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Correo">
+            </a>
+            <a href="https://www.instagram.com/bdo_ixtapaluca?igsh=cm1jYWlsejFieTdl" target="_blank" title="Visitar Instagram">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+    
+</body>
+</html>
